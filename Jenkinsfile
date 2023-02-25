@@ -13,7 +13,7 @@ pipeline {
 
     agent {
         docker {
-            image '172.30.43.99:80/repository/garm-docker-group/java-pipline-agent:j8-m3.6-d17-1'
+            image 'garm.ir/repository/garm-docker-group/java-pipline-agent:j8-m3.6-d17-1'
             args ' -it -u 0 --group-add 994 ' + // stat -c '%g' /var/run/docker.sock = 994
                     '-v /etc/docker/daemon.json:/etc/docker/daemon.json ' +
                     '-v /root/.docker/config.json:/root/.docker/config.json ' +
